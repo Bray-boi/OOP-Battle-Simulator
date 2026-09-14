@@ -4,8 +4,8 @@ class Hero:
 
     def __init__(self, name):
         self.name = name
-        self.health = 125
-        self.attack_power = 20
+        self.health = 115
+        self.attack_power = 15
         rollRace = random.randint(1, 20)
         if rollRace <= 12:
             race = "Human"
@@ -13,9 +13,14 @@ class Hero:
             race = "Angel"
         elif rollRace > 13 and rollRace < 20:
             race = "Shrek"
-
         self.race = race
 
+        if race == "Angel":
+            self.health = 150
+            self.attack_power = 25
+        if race == "Shrek":
+            self.health = 125
+            self.attack_power = 20
     def attack(self):
        return random.randint(1, self.attack_power)
 

@@ -30,5 +30,6 @@ def main():
         hero.take_damage(damage)
         hero.is_alive()
 
+    
 if __name__ == "__main__":
     main()
