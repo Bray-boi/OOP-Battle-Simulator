@@ -29,7 +29,5 @@ def main():
         print(f"Fred hits back!")
         hero.take_damage(damage)
         hero.is_alive()
-
-    
 if __name__ == "__main__":
     main()

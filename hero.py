@@ -11,18 +11,22 @@ class Hero:
             race = "Human"
         elif rollRace == 13:
             race = "Angel"
-        elif rollRace > 13 and rollRace < 20:
+        elif rollRace > 13 and rollRace <= 20:
             race = "Shrek"
         self.race = race
-
         if race == "Angel":
             self.health = 150
             self.attack_power = 25
         if race == "Shrek":
             self.health = 125
             self.attack_power = 20
+        
     def attack(self):
-       return random.randint(1, self.attack_power)
+       if random.randint(1, 5) == 3:
+           print("CRITICAL HIT")
+           return random.randint(1, self.attack_power) *2
+       else:
+            return random.randint(1, self.attack_power)
 
     def take_damage(self, damage):
         self.health = max(0, self.health - damage)
